@@ -1,0 +1,13 @@
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\bin\Debug\KinectPhotobooth.exe.config
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\bin\Debug\KinectPhotobooth.exe
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\bin\Debug\KinectPhotobooth.pdb
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.csprojResolveAssemblyReference.cache
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\MainWindow.baml
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\MainWindow.g.cs
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\App.g.cs
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth_MarkupCompile.cache
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.g.resources
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.Properties.Resources.resources
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.csproj.GenerateResource.Cache
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.exe
+c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.pdb
