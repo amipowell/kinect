@@ -122,8 +122,8 @@ namespace KinectPhotobooth
         private void MapJointsWithUIElement(Skeleton skeleton)
         {
             Point mappedPoint = this.ScalePosition(skeleton.Joints[JointType.HandRight].Position);
-            Canvas.SetLeft(righthand, mappedPoint.X - 150);
-            Canvas.SetTop(righthand, mappedPoint.Y - 150);
+            Canvas.SetLeft(righthand, mappedPoint.X-20);
+            Canvas.SetTop(righthand, mappedPoint.Y-80);
         }
 
         private Point ScalePosition(SkeletonPoint skeletonPoint)
