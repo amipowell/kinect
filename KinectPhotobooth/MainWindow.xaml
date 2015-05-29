@@ -14,7 +14,8 @@
         -->
         <Canvas Grid.Row="0" Height="480" Width="640" HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Canvas.Left="0" Canvas.Top="0" Name="righthand" >
-                <Image Source="C:\Users\Ami\Documents\Visual Studio 2013\Projects\KinectPhotobooth\sword.png" Height="109" Width="136" />
+                <!--<Image Source="C:\Users\Ami\Documents\Visual Studio 2013\Projects\KinectPhotobooth\sword.png" Height="109" Width="136" />-->
+                <Image Source="C:\Users\Gabriel\Documents\GitHub\kinect\sword.png" Height="109" Width="136" />
             </StackPanel>
         </Canvas>
 

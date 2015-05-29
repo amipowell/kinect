@@ -14,3 +14,13 @@ c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotob
 C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\bin\Debug\KinectPhotobooth.exe.config
 C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.exe
 C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.pdb
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\bin\Debug\KinectPhotobooth.exe
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\bin\Debug\KinectPhotobooth.pdb
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\MainWindow.baml
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\MainWindow.g.cs
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\App.g.cs
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth_MarkupCompile.cache
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.g.resources
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.Properties.Resources.resources
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.csproj.GenerateResource.Cache

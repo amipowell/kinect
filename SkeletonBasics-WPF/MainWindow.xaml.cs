@@ -258,6 +258,19 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
             }
         }
 
+        private void MapJointsWithUIElement(Skeleton skeleton)
+        {
+            Point mappedPoint = this.ScalePosition(skeleton.Joints[JointType.HandRight].Position);
+            Canvas.SetLeft(righthand, mappedPoint.X - 20);
+            Canvas.SetTop(righthand, mappedPoint.Y - 80);
+        }
+
+        private Point ScalePosition(SkeletonPoint skeletonPoint)
+        {
+            DepthImagePoint depthPoint = this.sensor.CoordinateMapper.MapSkeletonPointToDepthPoint(skeletonPoint, DepthImageFormat.Resolution640x480Fps30);
+            return new Point(depthPoint.X, depthPoint.Y);
+        }
+
         /// <summary>
         /// Execute shutdown tasks
         /// </summary>
@@ -282,12 +295,19 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
 
             using (SkeletonFrame skeletonFrame = e.OpenSkeletonFrame())
             {
+
                 if (skeletonFrame != null)
                 {
                     skeletons = new Skeleton[skeletonFrame.SkeletonArrayLength];
                     skeletonFrame.CopySkeletonDataTo(skeletons);
                 }
+                else
+                {
+                    return;
+                }
+                skeletonFrame.CopySkeletonDataTo(skeletons);
             }
+
 
             using (DrawingContext dc = this.drawingGroup.Open())
             {
@@ -356,7 +376,11 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
             this.DrawBone(skeleton, drawingContext, JointType.HipRight, JointType.KneeRight);
             this.DrawBone(skeleton, drawingContext, JointType.KneeRight, JointType.AnkleRight);
             this.DrawBone(skeleton, drawingContext, JointType.AnkleRight, JointType.FootRight);
- 
+
+            if (skeleton.Joints[JointType.HandRight].TrackingState == JointTrackingState.Tracked)
+            {
+                this.MapJointsWithUIElement(skeleton);
+            }
             // Render Joints
             foreach (Joint joint in skeleton.Joints)
             {
