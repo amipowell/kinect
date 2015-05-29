@@ -11,3 +11,6 @@ c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotob
 c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.csproj.GenerateResource.Cache
 c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.exe
 c:\users\ami\documents\visual studio 2013\Projects\KinectPhotobooth\KinectPhotobooth\obj\Debug\KinectPhotobooth.pdb
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\bin\Debug\KinectPhotobooth.exe.config
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.exe
+C:\Users\Gabriel\Documents\GitHub\kinect\KinectPhotobooth\obj\Debug\KinectPhotobooth.pdb

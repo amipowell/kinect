@@ -168,11 +168,8 @@ namespace Microsoft.Samples.Kinect.SkeletonBasics
 
             if (KinectSensor.KinectSensors.Count > 0)
             {
-                //this.sensor = KinectSensor.KinectSensors[0];
-                //this.StartSensor();
                 this.sensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
                 this.sensor.DepthStream.Enable();
-                //this.sensor.SkeletonStream.Enable();
                 this.sensor.ColorFrameReady += sensor_ColorFrameReady;
             }
             else
