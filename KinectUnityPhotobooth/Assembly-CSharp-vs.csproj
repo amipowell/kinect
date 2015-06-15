@@ -72,7 +72,10 @@
      <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
      <Compile Include="Assets\KinectScripts\Samples\SimpleGestureListener.cs" />
      <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
-     <Compile Include="Assets\Scripts\ChangeBackground.cs" />
+     <Compile Include="Assets\UnityScripts\AquaBackground.cs" />
+     <Compile Include="Assets\UnityScripts\ChangeBackground.cs" />
+     <Compile Include="Assets\UnityScripts\DinoBackground.cs" />
+     <Compile Include="Assets\UnityScripts\EgyptBackground.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.6/UnityEngine.UI.dll</HintPath>
  </Reference>
