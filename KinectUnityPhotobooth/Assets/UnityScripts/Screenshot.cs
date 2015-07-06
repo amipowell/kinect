@@ -7,10 +7,11 @@ public class Screenshot : MonoBehaviour {
 
 	public GameObject[] Panels;
 	public GameObject TweetMenu;
-	public Sprite PictureSprite;
 	public Image Picture;
-	public Texture2D tex;
-	public byte[] fileData;
+
+	private Sprite PictureSprite;
+	private Texture2D tex;
+	private byte[] fileData;
 
 	public void OnMouseDown() {
 		for (int i = 0; i < Panels.Length; i++) {
@@ -20,13 +21,13 @@ public class Screenshot : MonoBehaviour {
 	}
 
 	void TakePicture() {
-		Application.CaptureScreenshot("C:/Users/Gabriel/Pictures/Kinect/Screenshot.png");
+		Application.CaptureScreenshot("Assets/Resources/Screenshot.png");
 		Invoke ("Menu", 1);
 	}
 
 	void Menu() {
-		if (File.Exists("C:/Users/Gabriel/Pictures/Kinect/Screenshot.png")) {
-			fileData = File.ReadAllBytes("C:/Users/Gabriel/Pictures/Kinect/Screenshot.png");
+		if (File.Exists("Assets/Resources/Screenshot.png")) {
+			fileData = File.ReadAllBytes("Assets/Resources/Screenshot.png");
 			tex = new Texture2D(2, 2);
 			tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
 		}
