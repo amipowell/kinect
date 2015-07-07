@@ -3,34 +3,27 @@ using System.Collections;
 
 public class Equip : MonoBehaviour {
 
-	public GameObject[] Armour, Egypt;
+	public string[] Tags;
 
 	private GameObject[][] EquipArray = new GameObject[2][];
-	private GameObject[] ActiveEquip, PrevEquip;
+	private string ActiveTag, PrevTag;
 
 	void Start () {
-		EquipArray [0] = Armour;
-		EquipArray [1] = Egypt;
-		PrevEquip = Armour;
+		for (int i = 0; i < Tags.Length; i++) {
+			EquipArray[i] = GameObject.FindGameObjectsWithTag(Tags[i]);
+		}
+		ActiveTag = "Egypt";
+		ChangeEquip ("Armour");
 	}
 
-	public void EquipArmour () {
-		PrevEquip = ActiveEquip;
-		ActiveEquip = Armour;
-		EquipAvatar ();
-	}
+	public void ChangeEquip (string Tag) {
+		PrevTag = ActiveTag;
+		ActiveTag = Tag;
 
-	public void EquipEgypt () {
-		PrevEquip = ActiveEquip;
-		ActiveEquip = Egypt;
-		EquipAvatar ();
-	}
-
-	void EquipAvatar () {
-		for (int i = 0; i < EquipArray.Length; i++) {
-			if (EquipArray[i] == ActiveEquip){
+		for (int i = 0; i < Tags.Length; i++) {
+			if (Tags[i] == Tag){
 				EquipObjects (i, true);
-			} else if (EquipArray[i] == PrevEquip){
+			} else if (Tags[i] == PrevTag){
 				EquipObjects (i, false);
 			}
 		}
