@@ -2,11 +2,18 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 public class Screenshot : MonoBehaviour {
 
 	public GameObject[] Panels;
 	public GameObject TweetMenu;
+	public GameObject SendMenu;
+	public InputField UserEmail;
+	public GameObject SuccessText;
 	public Image Picture;
 	public Text CountdownText;
 
@@ -55,10 +62,40 @@ public class Screenshot : MonoBehaviour {
 		TweetMenu.SetActive (true);
 	}
 
-	public void Tweet() {
-
+	public void Email() {
+		TweetMenu.SetActive (false);
+		SuccessText.SetActive (false);
+		SendMenu.SetActive (true);
 	}
 
+	public void Send() {
+		SuccessText.SetActive (false);
+
+		MailMessage email = new MailMessage();
+		email.From = new MailAddress("From@gmail.com");
+		email.To.Add(UserEmail.text);
+		email.Body = "This is a test mail from C# program";
+		email.Subject = "ROM Photobooth";
+		email.Attachments.Add(new Attachment("Assets/Resources/Screenshot.png"));
+
+		SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
+		smtpServer.Port = 587;
+		smtpServer.Credentials = new System.Net.NetworkCredential("gab.bussieres@gmail.com", "FAKEpassword") as ICredentialsByHost;
+		smtpServer.EnableSsl = true;
+		ServicePointManager.ServerCertificateValidationCallback = 
+			delegate(object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) 
+		{ return true; };
+		smtpServer.Send(email);
+
+		SuccessText.SetActive (true);
+	}
+	
+	public void Back() {
+		UserEmail.text = "";
+		SendMenu.SetActive (false);
+		TweetMenu.SetActive (true);
+	}
+	
 	public void Retake() {
 		TweetMenu.SetActive (false);
 		for (int i = 0; i < Panels.Length; i++) {
