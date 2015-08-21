@@ -10,10 +10,8 @@ using System.Security.Cryptography.X509Certificates;
 public class Screenshot : MonoBehaviour {
 
 	public GameObject[] Panels;
-	public GameObject TweetMenu;
-	public GameObject SendMenu;
+	public GameObject TweetMenu, SendMenu, SuccessText;
 	public InputField UserEmail;
-	public GameObject SuccessText;
 	public Image Picture;
 	public Text CountdownText;
 
@@ -22,8 +20,28 @@ public class Screenshot : MonoBehaviour {
 	private byte[] fileData;
 	private int time;
 
+	private MailMessage email;
+	private SmtpClient smtpServer;
+
+	private string from, screenshotLocation;
+
 	void Start () {
 		CountdownText.text = "";
+		from = "gab.bussieres@gmail.com";
+		screenshotLocation = "Assets/Resources/Screenshot.png";
+
+		email = new MailMessage();
+		email.From = new MailAddress(from);
+		email.Subject = "ROM Photobooth";
+		email.Body = "This is a test mail from C# program";
+
+		smtpServer = new SmtpClient("smtp.gmail.com");
+		smtpServer.Port = 587;
+		smtpServer.Credentials = new System.Net.NetworkCredential(from, "FAKEpassword") as ICredentialsByHost;
+		smtpServer.EnableSsl = true;
+		ServicePointManager.ServerCertificateValidationCallback = 
+			delegate(object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) 
+		{ return true; };
 	}
 
 	public void OnMouseDown() {
@@ -47,13 +65,13 @@ public class Screenshot : MonoBehaviour {
 
 	void TakePicture() {
 		CountdownText.text = "";
-		Application.CaptureScreenshot("Assets/Resources/Screenshot.png");
+		Application.CaptureScreenshot(screenshotLocation);
 		Invoke ("Menu", 0.5f);
 	}
 
 	void Menu() {
-		if (File.Exists("Assets/Resources/Screenshot.png")) {
-			fileData = File.ReadAllBytes("Assets/Resources/Screenshot.png");
+		if (File.Exists(screenshotLocation)) {
+			fileData = File.ReadAllBytes(screenshotLocation);
 			tex = new Texture2D(2, 2);
 			tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
 		}
@@ -70,22 +88,14 @@ public class Screenshot : MonoBehaviour {
 
 	public void Send() {
 		SuccessText.SetActive (false);
-
-		MailMessage email = new MailMessage();
-		email.From = new MailAddress("From@gmail.com");
+		
 		email.To.Add(UserEmail.text);
-		email.Body = "This is a test mail from C# program";
-		email.Subject = "ROM Photobooth";
-		email.Attachments.Add(new Attachment("Assets/Resources/Screenshot.png"));
-
-		SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
-		smtpServer.Port = 587;
-		smtpServer.Credentials = new System.Net.NetworkCredential("gab.bussieres@gmail.com", "FAKEpassword") as ICredentialsByHost;
-		smtpServer.EnableSsl = true;
-		ServicePointManager.ServerCertificateValidationCallback = 
-			delegate(object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) 
-		{ return true; };
+		email.Attachments.Add(new Attachment(screenshotLocation));
+		
 		smtpServer.Send(email);
+
+		email.To.Clear ();
+		email.Attachments.Clear ();
 
 		SuccessText.SetActive (true);
 	}
