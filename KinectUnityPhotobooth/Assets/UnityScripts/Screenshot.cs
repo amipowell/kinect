@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
+
+using System.Collections;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
@@ -14,6 +15,7 @@ public class Screenshot : MonoBehaviour {
 	public InputField UserEmail;
 	public Image Picture;
 	public Text CountdownText;
+	public int picWidth, picHeight;
 
 	private Sprite PictureSprite;
 	private Texture2D tex;
@@ -75,7 +77,7 @@ public class Screenshot : MonoBehaviour {
 			tex = new Texture2D(2, 2);
 			tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
 		}
-		PictureSprite = Sprite.Create (tex, new Rect(0, 0, 1352, 675), new Vector2(0, 0));
+		PictureSprite = Sprite.Create (tex, new Rect(0, 0, picWidth, picHeight), new Vector2(0, 0));
 		Picture.sprite = PictureSprite;
 		TweetMenu.SetActive (true);
 	}

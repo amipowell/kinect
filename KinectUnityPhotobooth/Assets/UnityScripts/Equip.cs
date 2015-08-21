@@ -13,7 +13,7 @@ public class Equip : MonoBehaviour {
 			EquipArray[i] = GameObject.FindGameObjectsWithTag(Tags[i]);
 		}
 		ActiveTag = "Egypt";
-		ChangeEquip ("Armour");
+		ChangeEquip ("Mexico");
 	}
 
 	public void ChangeEquip (string Tag) {
