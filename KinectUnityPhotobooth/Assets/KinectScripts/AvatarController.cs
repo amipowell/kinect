@@ -11,6 +11,7 @@ using System.Text;
 [RequireComponent(typeof(Animator))]
 public class AvatarController : MonoBehaviour
 {	
+	public int hi;
 	// Bool that has the characters (facing the player) actions become mirrored. Default false.
 	public bool mirroredMovement = false;
 	

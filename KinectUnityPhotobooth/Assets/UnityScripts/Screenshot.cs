@@ -11,7 +11,7 @@ using System.Security.Cryptography.X509Certificates;
 public class Screenshot : MonoBehaviour {
 
 	public GameObject[] Panels;
-	public GameObject TweetMenu, SendMenu, SuccessText;
+	public GameObject TweetMenu, SendMenu, SuccessText, GestureInfo;
 	public InputField UserEmail;
 	public Image Picture;
 	public Text CountdownText;
@@ -47,6 +47,7 @@ public class Screenshot : MonoBehaviour {
 	}
 
 	public void OnMouseDown() {
+		GestureInfo.SetActive (false);
 		for (int i = 0; i < Panels.Length; i++) {
 			Panels[i].SetActive(false);
 		}
@@ -80,6 +81,7 @@ public class Screenshot : MonoBehaviour {
 		PictureSprite = Sprite.Create (tex, new Rect(0, 0, picWidth, picHeight), new Vector2(0, 0));
 		Picture.sprite = PictureSprite;
 		TweetMenu.SetActive (true);
+		GestureInfo.SetActive (true);
 	}
 
 	public void Email() {

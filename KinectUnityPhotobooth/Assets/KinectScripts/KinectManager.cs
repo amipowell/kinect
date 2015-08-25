@@ -14,7 +14,7 @@ public class KinectManager : MonoBehaviour
 	
 	
 	// Public Bool to determine how many players there are. Default of one user.
-	public bool TwoUsers = false;
+	public bool TwoUsers = true;
 	
 //	// Public Bool to determine if the sensor is used in near mode.
 //	public bool NearMode = false;

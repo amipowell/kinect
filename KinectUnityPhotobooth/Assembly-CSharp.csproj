@@ -74,6 +74,7 @@
      <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
      <Compile Include="Assets\UnityScripts\Background.cs" />
      <Compile Include="Assets\UnityScripts\Equip.cs" />
+     <Compile Include="Assets\UnityScripts\Face.cs" />
      <Compile Include="Assets\UnityScripts\Screenshot.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.6/UnityEngine.UI.dll</HintPath>

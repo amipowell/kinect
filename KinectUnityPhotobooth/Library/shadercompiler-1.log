@@ -1,0 +1,39 @@
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-7428
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=2902 outsize=1800 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6545 outsize=3980 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6545 outsize=4573 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4347 outsize=3630 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4347 outsize=4898 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4346 outsize=3598 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4346 outsize=4508 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6116 outsize=3752 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6116 outsize=4142 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: preprocess
+  insize=2883 outsize=1795 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6532 outsize=3980 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6532 outsize=5361 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4334 outsize=3630 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4334 outsize=5686 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4333 outsize=3598 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4333 outsize=4427 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6103 outsize=3752 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6103 outsize=4427 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
