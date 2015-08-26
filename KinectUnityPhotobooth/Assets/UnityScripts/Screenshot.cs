@@ -35,7 +35,7 @@ public class Screenshot : MonoBehaviour {
 		email = new MailMessage();
 		email.From = new MailAddress(from);
 		email.Subject = "ROM Photobooth";
-		email.Body = "This is a test mail from C# program";
+		email.Body = "Here's your photo! :)";
 
 		smtpServer = new SmtpClient("smtp.gmail.com");
 		smtpServer.Port = 587;
@@ -48,9 +48,7 @@ public class Screenshot : MonoBehaviour {
 
 	public void OnMouseDown() {
 		GestureInfo.SetActive (false);
-		for (int i = 0; i < Panels.Length; i++) {
-			Panels[i].SetActive(false);
-		}
+		SetPanels (false);
 		time = 3;
 		Countdown ();
 	}
@@ -85,9 +83,8 @@ public class Screenshot : MonoBehaviour {
 	}
 
 	public void Email() {
-		TweetMenu.SetActive (false);
 		SuccessText.SetActive (false);
-		SendMenu.SetActive (true);
+		SwitchMenu (TweetMenu, SendMenu);
 	}
 
 	public void Send() {
@@ -106,14 +103,22 @@ public class Screenshot : MonoBehaviour {
 	
 	public void Back() {
 		UserEmail.text = "";
-		SendMenu.SetActive (false);
-		TweetMenu.SetActive (true);
+		SwitchMenu (SendMenu, TweetMenu);
 	}
 	
 	public void Retake() {
 		TweetMenu.SetActive (false);
+		SetPanels (true);
+	}
+
+	void SwitchMenu(GameObject falseMenu, GameObject trueMenu) {
+		falseMenu.SetActive (false);
+		trueMenu.SetActive (true);
+	}
+
+	void SetPanels(bool active) {
 		for (int i = 0; i < Panels.Length; i++) {
-			Panels[i].SetActive (true);
+			Panels[i].SetActive (active);
 		}
 	}
 }
